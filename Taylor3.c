@@ -15,16 +15,18 @@ double Taylor(double y){
 	double x = (y-1);
 	double z = (y+1);
 	double a = x/z;
+	double tres_a = a*a*a;
+	double nueve_a = a*a*a*a*a*a*a*a*a;
 	return 2 * (c0 * a +
-			c1 * a* a* a +
-			c2 * a* a* a* a* a  +
+			c1 * tres_a +
+			c2 * tres_a* a* a  +
 			c3 * a* a* a* a* a* a* a  +
-			c4 * a* a* a* a* a* a* a* a* a +
-			c5 * a* a* a* a* a* a* a* a* a* a* a +
-			c6 * a* a* a* a* a* a* a* a* a* a* a* a* a +
-			c7 * a* a* a* a* a* a* a* a* a* a* a* a* a* a* a);
+			c4 * nueve_a +
+			c5 * nueve_a* a* a +
+			c6 * nueve_a* a* a* a* a +
+			c7 * nueve_a* a* a* a* a* a* a);
 }
-
+//probando si es que funca
 
 int main(int argc,char *argv[]){
 	int sgte_opcion;
